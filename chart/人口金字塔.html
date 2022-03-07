@@ -18,13 +18,19 @@
     <script>
     var ctx = document.getElementById('myChart');
     
-    const labels = ["博畢","博肄", "碩畢", "碩肄", "大畢", "大肄"];
+    // male datapoint converter
+    const male = [189, 97, 2076, 691, 7887, 3687, 4];
+    const maleData = [];
+    male.forEach(element => maleData.push(element * -1));
+    console.log(maleData);
+
+    const labels = ["博士","碩士", "學士", "高中", "國中", "國小", "其他"];
     const data = {
                 labels: labels,
                 datasets: [
                   {
                     label: '男性',
-                    data: [-189, -97, -2076, -691, -7887, -3687],
+                    data: maleData,
                     backgroundColor:
                     [
                         'rgba(54, 162, 235)',
@@ -37,7 +43,7 @@
                 },
                 {
                     label: '女性',
-                    data: [85, 42, 1401, 609, 8330, 3324],
+                    data: [85, 42, 1401, 609, 8330, 3324, 4],
                     backgroundColor:
                     [
                         'rgba(255, 99, 132)',
@@ -51,6 +57,19 @@
                 ]
     };
 
+    // block tooltip
+    const tooltip = {
+      yAlign: 'bottom',
+      titleAlign: 'center',
+      callbacks: {
+        label: function(context) {
+          console.log(context.raw);
+          console.log(context.dataset.label);
+          return `${context.dataset.label} ${Math.abs(context.raw)}`;
+        }
+      }
+    };
+
     const config = {
         	type: 'bar',
         	data: data,
@@ -61,12 +80,23 @@
             	maintainAspectRatio: false,
               indexAxis: 'y',
             	scales: {
-                	y: {
+                	x: {
+                    stacked: true,
+                    ticks: {
+                      callback: function(value, index, values) {
+                        return Math.abs(value);
+                      }
+                    }
+                  },
+                  y: {
                     	beginAtZero: true,
                       stacked: true
                 	},
-            	}
-        	},
+            	},
+              plugins: {
+                tooltip,
+              }
+        	}
     };
 
     const myChart = new Chart(ctx, config);
