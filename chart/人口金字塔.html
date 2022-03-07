@@ -19,12 +19,12 @@
     var ctx = document.getElementById('myChart');
     
     // male datapoint converter
-    const male = [189, 97, 2076, 691, 7887, 3687, 4];
+    const male = [189, 2076, 7887,3687, 691, 45, 36, 20];
     const maleData = [];
     male.forEach(element => maleData.push(element * -1));
     console.log(maleData);
 
-    const labels = ["博士","碩士", "學士", "高中", "國中", "國小", "其他"];
+    const labels = ["博士","碩士", "學士", "專科", "高中", "國中", "國小", "其他"];
     const data = {
                 labels: labels,
                 datasets: [
@@ -43,7 +43,7 @@
                 },
                 {
                     label: '女性',
-                    data: [85, 42, 1401, 609, 8330, 3324, 4],
+                    data: [85, 1401, 8330, 3324, 609, 40, 30, 25],
                     backgroundColor:
                     [
                         'rgba(255, 99, 132)',
