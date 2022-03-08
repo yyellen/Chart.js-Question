@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>性別-對比雷達</title>
+  <title>全國-性別-教育對比radar</title>
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -22,12 +22,10 @@
     var ctx = document.getElementById('myChart');
 
     const data = {
-      labels: [
-      "博畢","博肄", "碩畢", "碩肄", "大畢", "大肄"
-      ],
+      labels: ["博士","碩士", "學士", "專科", "高中", "國中", "國小", "其他"],
       datasets: [{
         label: '男性',
-        data: [189, 97, 2076, 691, 7887, 3687],
+        data: [189, 97, 2076, 691, 7887, 3687, 100, 100],
         fill: true,
         backgroundColor: 'rgba(54, 162, 235, 0.2)',
         borderColor: 'rgb(54, 162, 235)',
@@ -37,7 +35,7 @@
         pointHoverBorderColor: 'rgb(255, 99, 132)'
       }, {
         label: '女性',
-        data: [85, 42, 1401, 609, 8330, 3324],
+        data: [85, 42, 1401, 609, 8330, 3324, 100, 100],
         fill: true,
         backgroundColor: 'rgba(255, 99, 132, 0.2)',
         borderColor: 'rgb(255, 99, 132)',

@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>男性-教育程度組成pie</title>
+    <title>單一學歷-性別組成pie</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -20,39 +20,22 @@
     
     const data = {
         	labels: [
-          "博畢","博肄", "碩畢", "碩肄", "大畢", "大肄"
+          '男性', '女性'
         	],
         	datasets: [{
-            	label: '男性',
-            	data: [189, 97, 2076, 691, 7887, 3687],
+            	label: '大畢',
+            	data: [2076, 1401],
             	backgroundColor: [
               'rgba(54, 162, 235)',
-              'rgba(54, 162, 235, 0.8)',
-              'rgba(54, 162, 235, 0.6)',
-              'rgba(54, 162, 235, 0.4)',
-              'rgba(54, 162, 235, 0.2)',
-              'rgba(54, 162, 235, 0.1)',
-            	],
-            	hoverOffset: 10
-        	}],
-          datasets: [{
-            	label: '男性',
-            	data: [1890, 907, 20076, 091, 78087, 36807],
-            	backgroundColor: [
-              'rgba(54, 162, 235)',
-              'rgba(54, 162, 235, 0.8)',
-              'rgba(54, 162, 235, 0.6)',
-              'rgba(54, 162, 235, 0.4)',
-              'rgba(54, 162, 235, 0.2)',
-              'rgba(54, 162, 235, 0.1)',
+              'rgba(255, 99, 132)',
             	],
             	hoverOffset: 10
         	}]
 };
 
 const config = {
-        	// type: 'pie',
-          type: 'doughnut',
+        	type: 'pie',
+          // type: 'doughnut',
         	data: data,
         	options: {
             // maintainAspectRatio: false,
