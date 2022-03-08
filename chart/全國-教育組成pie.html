@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>教育程度-性別組成圓餅</title>
+    <title>全國-教育組成pie</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -19,18 +19,22 @@
     var ctx = document.getElementById('myChart');
     
     const data = {
-        	labels: [
-          '男性', '女性'
-        	],
+        	labels: ["博士","碩士", "學士", "專科", "高中", "國中", "國小", "其他"],
         	datasets: [{
-            	label: '大畢',
-            	data: [2076, 1401],
+            	label: '教育程度',
+            	data: [189, 97, 2076, 691, 7887, 3687, 100, 100],
             	backgroundColor: [
-              'rgba(54, 162, 235)',
-              'rgba(255, 99, 132)',
+              'rgba(255, 205, 86, 1)',
+              'rgba(255, 205, 86, 0.9)',
+              'rgba(255, 205, 86, 0.8)',
+              'rgba(255, 205, 86, 0.7)',
+              'rgba(255, 205, 86, 0.6)',
+              'rgba(255, 205, 86, 0.5)',
+              'rgba(255, 205, 86, 0.4)',
+              'rgba(255, 205, 86, 0.3)',
             	],
-            	hoverOffset: 10
-        	}]
+            	hoverOffset: 20
+        	}],
 };
 
 const config = {

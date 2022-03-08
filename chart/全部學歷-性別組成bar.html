@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>性別-教育組成bar</title>
+    <title>學歷-性別組成bar</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -18,67 +18,33 @@
     <script>
     var ctx = document.getElementById('myChart');
     
-    const labels = ["男性","女性"];
+    const labels = ["博士","碩士", "學士", "專科", "高中", "國中", "國小", "其他"];
     const data = {
                 labels: labels,
                 datasets: [
-                {
-                    label: "碩畢",
-                    data: [2076,1401],
-                    backgroundColor:
-                    [
-                        'rgba(54, 162, 235, 1)',
-                        'rgba(255, 99, 132, 1)'
-                    ],
-                    borderColor: 
-                    [
-                        'rgba(54, 162, 235)',
-                        'rgba(255, 99, 132)'
-                    ],
-                        borderWidth: 1
-                },
-                {
-                    label: "碩肄",
-                    data: [691, 609],
-                    backgroundColor:
-                    [
-                        'rgba(54, 162, 235, 0.8)',
-                        'rgba(255, 99, 132, 0.8)'
-                    ],
-                    borderColor: 
-                    [
-                        'rgba(54, 162, 235)',
-                        'rgba(255, 99, 132)'
-                    ],
-                        borderWidth: 1
-                },
                   {
-                    label: "大畢",
-                    data: [7887,8330],
+                    label: '男性',
+                    data: [189, 97, 2076, 691, 7887, 3687, 100, 100],
                     backgroundColor:
                     [
-                        'rgba(54, 162, 235, 0.6)',
-                        'rgba(255, 99, 132, 0.6)'
+                        'rgba(54, 152, 235, 0.2)',
                     ],
                     borderColor: 
                     [
-                        'rgba(54, 162, 235)',
-                        'rgba(255, 99, 132)'
+                        'rgb(54, 162, 235)',
                     ],
                         borderWidth: 1
                 },
                 {
-                    label: "大肄",
-                    data: [3687,3324],
+                    label: '女性',
+                    data: [85, 42, 1401, 609, 8330, 3324, 100, 100],
                     backgroundColor:
                     [
-                        'rgba(54, 162, 235, 0.4)',
-                        'rgba(255, 99, 132, 0.4)'
+                        'rgba(255, 99, 132, 0.2)',
                     ],
                     borderColor: 
                     [
-                        'rgba(54, 162, 235)',
-                        'rgba(255, 99, 132)'
+                        'rgb(255, 99, 132)',
                     ],
                         borderWidth: 1
                 },
@@ -90,7 +56,6 @@
         	data: data,
         	options: {
             	maintainAspectRatio: false,
-              indexAxis: 'y',
             	scales: {
                   x: {
                     	stacked: true
