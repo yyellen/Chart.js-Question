@@ -59,11 +59,11 @@
       </div>
       <!-- end header -->
 
-      <!-- 1 全國各級教育程度金字塔 pyramid-->
+      <!-- 1 全體國民教育程度金字塔 pyramid-->
       <div class="chart-box mb-3 py-3">
 
         <div class="chart-header">
-          <h3 class="title">全國各級教育程度金字塔</h3>
+          <h3 class="title">全體國民教育程度金字塔</h3>
         </div>
 
         <div class="chart-body">
@@ -141,11 +141,11 @@
 
       <div class="row">
         <div class="col-md-4">
-          <!-- 2 全國各級教育程度組成 pie-->
+          <!-- 2 全體國民教育程度 pie-->
           <div class="chart-box mb-3 py-3">
 
             <div class="chart-header">
-              <h3 class="title">全國各級教育程度組成</h3>
+              <h3 class="title">全體國民教育程度</h3>
 
             </div>
 
@@ -175,6 +175,11 @@
                     }]
                   },
                   options: {
+                    layout: {
+                      padding: {
+                        bottom: 10
+                      }
+                    },
                     legend: {
                       labels: {
                         fontColor: 'white' // 標籤顏色 
@@ -239,11 +244,11 @@
         </div>
       </div>
 
-      <!-- 4 全國縣市教育程度組成 stacked-bar-->
+      <!-- 4 全國各縣市教育程度 stacked-bar-->
       <div class="chart-box mb-3 py-3">
 
         <div class="chart-header">
-          <h3 class="title">全國縣市教育程度組成</h3>
+          <h3 class="title">全國各縣市教育程度</h3>
         </div>
 
         <div class="chart-body">

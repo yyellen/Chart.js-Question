@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>Test</title>
+    <title>Test HTML</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -55,15 +55,15 @@
             <option value="">連江縣</option>
           </select>
         </div>
-      
+
       </div>
       <!-- end header -->
 
-      <!-- 1 全國各級教育程度金字塔 pyramid-->
+      <!-- 1 全體國民教育程度金字塔 pyramid-->
       <div class="chart-box mb-3 py-3">
 
         <div class="chart-header">
-          <h3 class="title">全國各級教育程度金字塔</h3>
+          <h3 class="title">全體國民教育程度金字塔</h3>
         </div>
 
         <div class="chart-body">
@@ -141,12 +141,11 @@
 
       <div class="row">
         <div class="col-md-4">
-          <!-- 2 全國各級教育程度組成 pie-->
+          <!-- 2 全體國民教育程度 pie-->
           <div class="chart-box mb-3 py-3">
 
             <div class="chart-header">
-              <h3 class="title">全國各級教育程度組成</h3>
-
+              <h3 class="title">全體國民教育程度</h3>
             </div>
 
             <div class="chart-body">
@@ -175,6 +174,11 @@
                     }]
                   },
                   options: {
+                    layout: {
+                      padding: {
+                        bottom: 10
+                      }
+                    },
                     legend: {
                       labels: {
                         fontColor: 'white' // 標籤顏色 
@@ -237,108 +241,15 @@
           </div>
           <!-- end chart-box -->
         </div>
-      </div>  
-
-      <!-- 2 全國各級教育程度組成 pie-->
-      <div class="chart-box mb-3 py-3">
-
-        <div class="chart-header">
-          <h3 class="title">全國各級教育程度組成</h3>
-
-        </div>
-
-        <div class="chart-body">
-          <canvas id="myChart-2"></canvas>
-          <script>
-            var ctx = document.getElementById('myChart-2');
-            var myChart = new Chart(ctx, {
-              type: 'pie',
-              data: {
-                labels: ['博士','碩士', '學士', '專科', '高中', '國中(含)以下'],
-                datasets: [{
-                  backgroundColor: [
-                  'rgba(255, 205, 86, 0.9)',
-                  'rgba(255, 205, 86, 0.7)',
-                  'rgba(255, 205, 86, 0.5)',
-                  'rgba(255, 205, 86, 0.4)',
-                  'rgba(255, 205, 86, 0.3)',
-                  'rgba(255, 205, 86, 0.2)',
-                  ],
-                  borderColor: 'rgba(255, 205, 86)',
-                  borderWidth: 3,
-                  label: '教育程度',
-                  data: [189, 2076, 7887,3687, 691, 145],
-                  fill: false, // 是否填滿色彩
-                  hoverOffset: 10,
-                }]
-              },
-              options: {
-                legend: {
-                  labels: {
-                    fontColor: 'white' // 標籤顏色 
-                  }
-                }
-              }
-            });
-          </script>
-        </div>
-        <!-- end chart-body -->
-
       </div>
-      <!-- end chart-box -->
+      <!-- end row -->  
 
-      <!-- 3 全國各級教育程度性別人數 two-bar-->
+
+      <!-- 4 全國各縣市教育程度 stacked-bar-->
       <div class="chart-box mb-3 py-3">
 
         <div class="chart-header">
-          <h3 class="title">全國各級教育程度性別人數</h3>
-        </div>
-
-        <div class="chart-body">
-          <canvas id="myChart-3"></canvas>
-          <script>
-            var ctx = document.getElementById("myChart-3");
-            var myChart = new Chart(ctx, {
-              type: 'bar',
-              data: {
-                labels: ['博士','碩士', '學士', '專科', '高中', '國中(含)以下'],
-                datasets: [{
-                      label: '男性',
-                      data: [189, 2076, 7887,3687, 691, 145],
-                      backgroundColor: ['rgba(54, 162, 235, 0.5)'],
-                      borderColor: ['rgb(54, 162, 235)'],
-                      borderWidth: 1,
-                  },
-                  {
-                      label: '女性',
-                      data: [85, 1401, 8330, 3324, 609, 140],
-                      backgroundColor: ['rgba(255, 99, 132, 0.5)'],
-                      borderColor: ['rgb(255, 99, 132)'],
-                      borderWidth: 1,
-                  }]
-              },
-              options: {
-                scales: {
-                  yAxes: [{
-                    ticks: {
-                      beginAtZero: true,
-                    }
-                  }]
-                }
-              }
-            });
-          </script>
-        </div>
-        <!-- end chart-body -->
-
-      </div>
-      <!-- end chart-box -->
-
-      <!-- 4 全國縣市教育程度組成 stacked-bar-->
-      <div class="chart-box mb-3 py-3">
-
-        <div class="chart-header">
-          <h3 class="title">全國縣市教育程度組成</h3>
+          <h3 class="title">全國各縣市教育程度</h3>
         </div>
 
         <div class="chart-body">

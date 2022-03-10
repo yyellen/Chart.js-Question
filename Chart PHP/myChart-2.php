@@ -1,11 +1,11 @@
 <!-- Chart.js 3.5.0-->
 <script src="https://unpkg.com/chart.js@3.5.0/dist/chart.min.js"></script>
 
-<!-- 2 全國各級教育程度組成 pie-->
+<!-- 2 全體國民教育程度 pie-->
 <div class="chart-box mb-3 py-3">
 
 <div class="chart-header">
-  <h3 class="title">全國各級教育程度組成</h3>
+  <h3 class="title">全體國民教育程度</h3>
 </div>
 
 <div class="chart-body">
@@ -34,6 +34,11 @@
         }]
       },
       options: {
+        layout: {
+                      padding: {
+                        bottom: 10
+                      }
+                    },
         legend: {
           labels: {
             fontColor: 'white' // 標籤顏色 
